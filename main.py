@@ -21,7 +21,6 @@ def generate():
 def copyclipboard():
     pyperclip.copy(random_password)
 
-Label(root, text"Password Generator").pack()
 
 Label(root, text="Password Generator", font=("Helvetica", 16)).pack(pady=10)
 
