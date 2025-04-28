@@ -1,16 +1,27 @@
-# This is a sample Python script.
+from tkinter import *
+import pyperclip
+import random
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+root = Tk ()
+root.geometry("700x300")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+passwrd = StringVar()
+passlen = IntVar()
+passlen.set(12)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+def generate():
+    pass1 = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','1','2','3','4','5','6','7','8','9','0', '', '!','@','#','$','%','^','&','*','(',')']
+    password = ""
+    for x in range(passlen.get()):
+        password += random.choice(pass1)
+
+
+    passwrd.set(password)
+    
+    
+
+def copyclipboard():
+    pyperclip.copy(random_password)
+
+label(root, text="Password Generator",
