@@ -3,7 +3,8 @@ import pyperclip
 import random
 
 root = Tk ()
-root.geometry("700x300")
+root.title("Password Generator")
+
 
 
 passwrd = StringVar()
@@ -24,4 +25,5 @@ def generate():
 def copyclipboard():
     pyperclip.copy(random_password)
 
-label(root, text"Password Generator").pack()
+Label(root, text"Password Generator").pack()
+root.mainloop()
