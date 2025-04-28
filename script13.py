@@ -15,9 +15,9 @@ def generate():
     password = ""
     for x in range(passlen.get()):
         password += random.choice(pass1)
-        
 
-     passwrd.set(password)
+    passwrd.set(password)
+    
 
 def copyclipboard():
     pyperclip.copy(random_password)
