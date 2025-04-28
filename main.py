@@ -16,14 +16,21 @@ def generate():
     password = ""
     for x in range(passlen.get()):
         password += random.choice(pass1)
-
-
     passwrd.set(password)
-    
-    
 
 def copyclipboard():
     pyperclip.copy(random_password)
 
 Label(root, text"Password Generator").pack()
+
+Label(root, text="Password Generator", font=("Helvetica", 16)).pack(pady=10)
+
+Entry(root, textvariable=passwd, width=25).pack(pady=5)
+
+Entry(root, textvariable=passlen, width=5, justify="center").pack(pady=5)
+
+Button(root, text="Generate Password", command=generate).pack(pady=5)
+
+Button(root, text="Copy to Clipboard", command=copyclipboard).pack(pady=5)
+
 root.mainloop()
