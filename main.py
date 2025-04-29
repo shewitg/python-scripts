@@ -24,7 +24,7 @@ def copyclipboard():
 
 Label(root, text="Password Generator", font=("Helvetica", 16)).pack(pady=10)
 
-Entry(root, textvariable=passwd, width=25).pack(pady=5)
+Entry(root, textvariable=passrwd, width=25).pack(pady=5)
 
 Entry(root, textvariable=passlen, width=5, justify="center").pack(pady=5)
 
