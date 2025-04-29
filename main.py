@@ -17,6 +17,9 @@ def generate():
     for x in range(passlen.get()):
         password += random.choice(pass1)
     passwrd.set(password)
+    with open("saved_passwords.txt", "a") as file:
+        file.write(password + "\n")
+        
 
 def copyclipboard():
     pyperclip.copy(random_password)
